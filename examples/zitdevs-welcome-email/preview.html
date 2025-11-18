@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZitDevs Welcome - Enhanced Preview</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/email-styles.css">
+</head>
+<body>
+    <div class="email-preview-container">
+        <div class="email-preview-header">
+            <h1>ZitDevs Welcome Email</h1>
+            <p>Onboarding Email - Responsive HTML Template</p>
+            
+            <div class="preview-actions">
+                <a href="index.html" target="_blank" class="action-btn">
+                    📧 View Email Only
+                </a>
+                <button class="action-btn secondary download-html" data-filename="zitdevs-welcome-email.html">
+                    💾 Download HTML
+                </button>
+                <button class="action-btn success view-code" data-target="code-preview">
+                    👁️ View Source Code
+                </button>
+            </div>
+        </div>
+
+        <!-- Email Preview -->
+        <div class="email-preview-frame">
+            <iframe src="index.html" title="ZitDevs Welcome Email Preview"></iframe>
+        </div>
+
+        <!-- Code Preview -->
+        <div class="code-preview" id="code-preview" style="display: none;">
+            <div class="code-preview-header">
+                <h3>HTML Source Code</h3>
+                <button class="action-btn copy-code" data-target="source-code">📋 Copy Code</button>
+            </div>
+            <div class="code-preview-content">
+                <pre id="source-code"><!-- Code will be loaded by JavaScript --></pre>
+            </div>
+        </div>
+
+        <!-- Design Reference -->
+        <div class="design-reference">
+            <h3>Original Design Reference</h3>
+            <p>Compare with the original design document</p>
+            <a href="../../email-pdf/email-zitdevs.pdf" target="_blank" class="original-pdf-link">
+                📄 View Original PDF
+            </a>
+        </div>
+
+        <!-- Back to Portfolio -->
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="../../index.html" class="action-btn secondary">← Back to Portfolio</a>
+        </div>
+    </div>
+
+    <script src="../../assets/js/email-preview.js"></script>
+    <script>
+        // Cargar el código fuente cuando la página esté lista
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.emailPreview) {
+                window.emailPreview.loadEmailCode('index.html', 'source-code');
+            }
+        });
+    </script>
+</body>
+</html>

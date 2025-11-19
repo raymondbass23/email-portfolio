@@ -72,6 +72,17 @@
     background: #219653;
 }
 
+/* Vista activa */
+.preview-actions .action-btn.active {
+    background: #2c3e50;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.preview-content {
+    transition: opacity 0.3s ease;
+}
+
 .email-preview-frame {
     background: white;
     border-radius: 10px;
@@ -99,7 +110,7 @@
     color: white;
     padding: 15px 20px;
     display: flex;
-    justify-content: between;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -121,6 +132,8 @@
     font-size: 12px;
     line-height: 1.4;
     color: #2c3e50;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 
 .design-reference {
@@ -154,6 +167,30 @@
     transform: translateY(-2px);
 }
 
+/* Notificaciones */
+.download-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #27ae60;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 10000;
+    font-weight: 500;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+.download-notification.error {
+    background: #e74c3c;
+}
+
+.download-notification.show {
+    transform: translateX(0);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .email-preview-container {
@@ -173,5 +210,16 @@
     
     .email-preview-frame iframe {
         height: 400px;
+    }
+    
+    .code-preview-header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .code-preview-content pre {
+        padding: 15px;
+        font-size: 11px;
     }
 }
